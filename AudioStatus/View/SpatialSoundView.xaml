@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="AudioStatus.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF283772" Offset="0"/>
+            <GradientStop Color="#FF4B2870" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+    <Page.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="White"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalTextAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <Grid Margin="40,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="90*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="viewDolbyAtmosForHeadphones" Grid.Column="0">
+                <Image Source="/Images/icon-headphones[1].png"/>
+            </Border>
+            <Border x:Name="viewDolbyAtmosForHomeTheater" Grid.Column="2">
+                <Image Source="/Images/icon-hometheater[1].png"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <TextBlock x:Name="txtHeadphone" x:Uid="/Resources/headphone" />
+            <TextBlock x:Name="txtSpeaker" x:Uid="/Resources/speaker" />
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="26"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions> 
+            <Image x:Name="icnReadyToUse" Grid.Column="0" Source="/Images/Check_green_icon.svg.png"  Margin="4"/>
+            <TextBlock x:Name="txtReadyToUse" Grid.Column="1" x:Uid="/Resources/readyToUse"/>
+            <Border x:Name="brdReadyToUse" Grid.Row="1" Grid.ColumnSpan="2" Opacity="0.3"/>
+            <Button x:Name="btnSetup" Grid.ColumnSpan="2" x:Uid="/Resources/button" Width="180" HorizontalAlignment="Left"  Background="Transparent" BorderBrush="White" BorderThickness="1" Foreground="White" Click="btnSetup_Click"/>
+        </Grid>
+        <Grid Grid.Row="3" >
+            <TextBlock Grid.Column="1" x:Uid="/Resources/footer" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalTextAlignment="Justify"/>
+        </Grid>
+    </Grid>
+</Page>

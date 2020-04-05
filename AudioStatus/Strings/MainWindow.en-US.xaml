@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SoundStatusChecker"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="label_title_headphones">Dolby Atmos for Headphones</sys:String>
+    <sys:String x:Key="label_title_speakers">Dolby Atmos for Speakers</sys:String>
+    <sys:String x:Key="label_ready">Ready to use</sys:String>
+    <sys:String x:Key="label_summary_success">Delivers a premium, immersive audio experience throught any set of headphones on up to 10 devices</sys:String>
+    <sys:String x:Key="label_summary">Delivers powerful, moving audio to your Dolby Atmos enabled home theater, sound bar, or TV</sys:String>
+
+
+</ResourceDictionary>
